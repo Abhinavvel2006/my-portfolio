@@ -1,0 +1,97 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-image: url(./image/profile.jpg);
+  background-size: cover;
+  height: 90vh;
+  color: white;
+}
+
+/* Sidebar */
+.sidebar {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 260px;
+   height: 100%;
+   background: #0f172a;
+   padding: 20px;
+   transition: 0.3s;
+}
+    
+.sidebar .profile {
+  text-align: center;
+}
+
+.sidebar img {
+  width: 100px;
+  border-radius: 50%;
+}
+
+.sidebar h2 {
+  margin: 10px 0;
+}
+
+.sidebar .menu {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar .menu li {
+  margin: 20px 0;
+}
+
+.sidebar .menu a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+}
+
+.toggle-btn {
+  font-size: 24px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  cursor: pointer;
+  color: white;
+}
+
+/* Main content */
+.main-content {
+  margin-left: 0;
+  padding: 80px;
+  color: black;
+}
+/* Home Section Styling */
+.home-section {
+  text-align: center;
+  margin-top: 100px;   /* Push text down a little */
+}
+
+.big-title {
+  font-size: 48px;     /* Big heading */
+  font-weight: bold;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.typing-text {
+  font-size: 28px;
+  color: #f9fafb;     /* Slightly softer white */
+  font-weight: 500;
+}
+.download-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #2563eb;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.download-btn:hover {
+  background: #1d4ed8;
+}
