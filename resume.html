@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-- Sidebar -->
+  <div class="sidebar" id="sidebar">
+    <div class="profile">
+      <img src="image/profile.jpg" alt="Profile">
+      <h2>Abhinav</h2>
+    </div>
+    <ul class="menu">
+      <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+      <li><a href="about.html"><i class="fas fa-user"></i> About Me</a></li>
+      <li><a href="resume.html"><i class="fas fa-file"></i> Resume</a></li>
+      <li><a href="projects.html"><i class="fas fa-code"></i> Projects</a></li>
+      <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- Toggle Button -->
+  <button class="toggle-btn" onclick="toggleSidebar()" aria-controls="sidebar" aria-expanded="false" aria-label="Toggle navigation">☰</button>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <h1>My Resume</h1>
+
+    <!-- Resume Preview -->
+    <iframe src="Abhinav_CV.docx" width="100%" height="600px"></iframe>
+
+    <!-- Download Button -->
+    <a href="Abhinav_CV.docx" download class="download-btn">
+      <i class="fas fa-download"></i> Download Resume
+    </a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
