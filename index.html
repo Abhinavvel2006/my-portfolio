@@ -3,37 +3,175 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Portfolio</title>
+  <title>Abhinav - Portfolio</title>
   <link rel="stylesheet" href="style.css">
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-  <!-- Sidebar -->
-  <div class="sidebar" id="sidebar">
-    <div class="profile">
-      <img src="profile.jpg" alt="Profile">
-      <h2>Abhinav</h2>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <i class="fas fa-code"></i> Abhinav
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link active">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="projects.html" class="nav-link">Projects</a></li>
+        <li><a href="resume.html" class="nav-link">Resume</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
     </div>
-    <ul class="menu">
-      <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
-      <li><a href="about.html"><i class="fas fa-user"></i> About Me</a></li>
-      <li><a href="resume.html"><i class="fas fa-file"></i> Resume</a></li>
-      <li><a href="projects.html"><i class="fas fa-code"></i> Projects</a></li>
-      <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
-    </ul>
-  </div>
+  </nav>
 
-  <!-- Toggle Button -->
-  <div class="toggle-btn" onclick="toggleSidebar()">☰</div>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1 class="hero-title">Hi, I'm <span class="highlight">Abhinav</span></h1>
+        <p class="hero-subtitle">Student | Full Stack Developer | App Developer | AI Entrepreneur </p>
+        <p class="hero-description">I build complete web solutions,app development in android and ios and  like to explore innovative AI applications with a passion for entrepreneurship</p>
+        <div class="hero-buttons">
+          <a href="projects.html" class="btn btn-primary">View My Work</a>
+          <a href="contact.html" class="btn btn-secondary">Get In Touch</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="./image/profile.jpg" alt="Abhinav" class="profile-img">
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <p>Scroll to explore</p>
+      <i class="fas fa-chevron-down"></i>
+    </div>
+  </section>
 
-  <!-- Main Content -->
-  <div class="main-content">
-  <h1 class="big-title">Welcome to My Portfolio</h1>
-  <p class="typing-text">I am <span id="typing"></span></p>
-    </section>
-  </div>
+  <!-- Featured Projects -->
+  <section class="featured-projects">
+    <div class="container">
+      <h2 class="section-title">Featured Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-image">
+            <i class="fas fa-gamepad"></i>
+          </div>
+          <h3>Pong Game</h3>
+          <p>Small project with HTML, CSS, JS</p>
+          <a href="projects.html" class="view-link">View Projects →</a>
+        </div>
+        <div class="project-card">
+          <div class="project-image">
+            <i class="fas fa-building"></i>
+          </div>
+          <h3>BuildSmart Website</h3>
+          <p>Professional construction company website with responsive design</p>
+          <a href="projects.html" class="view-link">View Projects →</a>
+        </div>
+        <div class="project-card">
+          <div class="project-image">
+            <i class="fas fa-laptop-code"></i>
+          </div>
+          <h3>Portfolio</h3>
+          <p>This portfolio website you are currently viewing!</p>
+          <a href="projects.html" class="view-link">View Projects →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="skills">
+    <div class="container">
+      <h2 class="section-title">Skills & Technologies</h2>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h3>Frontend</h3>
+          <div class="skills-list">
+            <span class="skill-tag">HTML</span>
+            <span class="skill-tag">CSS</span>
+            <span class="skill-tag">JavaScript</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3>Backend</h3>
+          <div class="skills-list">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">Java</span>
+            <span class="skill-tag">SQL</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3>app development</h3>
+          <div class="skills-list">
+            <span class="skill-tag">Dart(Flutter)</span>
+            <span class="skill-tag">JS/TS(React Native)</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3>Frameworks</h3>
+          <div class="skills-list">
+            <span class="skill-tag">Bootstrap</span>
+            <span class="skill-tag">Jquery</span>
+            <span class="skill-tag">Django</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3>Tools & Platforms</h3>
+          <div class="skills-list">
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">VS Code</span>
+            <span class="skill-tag">GitHub</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta">
+    <div class="container">
+      <h2>Ready to Work Together?</h2>
+      <p>Let's create something amazing together</p>
+      <a href="contact.html" class="btn btn-large">Contact Me</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>Abhinav</h4>
+          <p>Student || Full Stack || AI&Enthusiast || App Development</p>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Follow Me</h4>
+          <div class="social-links">
+            <a href="https://github.com/Abhinavvel2006" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/abhinavvel2006" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Abhinav. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
 
   <script src="script.js"></script>
 </body>
-
 </html>

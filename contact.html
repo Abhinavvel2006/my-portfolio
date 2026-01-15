@@ -3,39 +3,146 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact</title>
+  <title>Contact Me - Abhinav Portfolio</title>
   <link rel="stylesheet" href="style.css">
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-  <!-- Sidebar -->
-  <div class="sidebar" id="sidebar">
-    <div class="profile">
-      <img src="profile.jpg" alt="Profile">
-      <h2>Abhinav</h2>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <i class="fas fa-code"></i> Abhinav
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="projects.html" class="nav-link">Projects</a></li>
+        <li><a href="resume.html" class="nav-link">Resume</a></li>
+        <li><a href="contact.html" class="nav-link active">Contact</a></li>
+      </ul>
     </div>
-    <ul class="menu">
-      <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
-      <li><a href="about.html"><i class="fas fa-user"></i> About Me</a></li>
-      <li><a href="resume.html"><i class="fas fa-file"></i> Resume</a></li>
-      <li><a href="projects.html"><i class="fas fa-code"></i> Projects</a></li>
-      <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
-    </ul>
-  </div>
+  </nav>
 
-  <!-- Toggle Button -->
-  <div class="toggle-btn" onclick="toggleSidebar()">☰</div>
+  <!-- Contact Section -->
+  <section class="contact-section">
+    <div class="container">
+      <h1 class="page-title">Get In Touch</h1>
+      <p class="contact-intro">Have a project in mind or want to collaborate? Feel free to reach out!</p>
+      
+      <div class="contact-content">
+        <div class="contact-info">
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <h3>Email</h3>
+            <p><a href="mailto:aadilabhinav33@gmail.com">aadilabhinav33@gmail.com</a></p>
+          </div>
 
-  <!-- Main Content -->
-  <div class="main-content">
-    <h1>Contact:</h1>
-    <p>Email: aadilabhinav33@gmail.com</p>
-    <p>Phone: +917708332208</p>
-    <p>LinkedIn:<a href="https://www.linkedin.com/in/abhinav-v-07665a323/">https://www.linkedin.com/in/abhinav-v-07665a323/</p>
-    <p>github:<a href="https://github.com/Abhinavvel2006">https://github.com/Abhinavvel2006</a></p>
-  </div>
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="fas fa-phone"></i>
+            </div>
+            <h3>Phone</h3>
+            <p><a href="tel:+917708332208">+91-7708332208</a></p>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <h3>Location</h3>
+            <p>Kanyakumari, India</p>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="fas fa-briefcase"></i>
+            </div>
+            <h3>Availability</h3>
+            <p>Open to freelance and full-time opportunities</p>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contactForm">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" required>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="6" required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+      </div>
+
+      <div class="social-connect">
+        <h2>Connect With Me</h2>
+        <div class="social-icons-large">
+          <a href="https://github.com/Abhinavvel2006" class="social-icon" title="GitHub">
+            <i class="fab fa-github"></i>
+            <span>GitHub</span>
+          </a>
+          <a href="https://www.linkedin.com/in/abhinavvel2006" class="social-icon" title="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+            <span>LinkedIn</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>Abhinav</h4>
+          <p>Student || Full Stack || AI&Enthusiast || App Development</p>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Follow Me</h4>
+          <div class="social-links">
+            <a href="https://github.com/Abhinavvel2006" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/abhinavvel2006" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Abhinav. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
 
   <script src="script.js"></script>
 </body>
-
 </html>
+

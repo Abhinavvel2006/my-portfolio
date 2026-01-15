@@ -3,36 +3,116 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Projects</title>
+  <title>Projects - Abhinav Portfolio</title>
   <link rel="stylesheet" href="style.css">
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-  <!-- Sidebar -->
-  <div class="sidebar" id="sidebar">
-    <div class="profile">
-      <img src="profile.jpg" alt="Profile">
-      <h2>Abhinav</h2>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <i class="fas fa-code"></i> Abhinav
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="projects.html" class="nav-link active">Projects</a></li>
+        <li><a href="resume.html" class="nav-link">Resume</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
     </div>
-    <ul class="menu">
-      <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
-      <li><a href="about.html"><i class="fas fa-user"></i> About Me</a></li>
-      <li><a href="resume.html"><i class="fas fa-file"></i> Resume</a></li>
-      <li><a href="projects.html"><i class="fas fa-code"></i> Projects</a></li>
-      <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
-    </ul>
-  </div>
+  </nav>
 
-  <!-- Toggle Button -->
-  <div class="toggle-btn" onclick="toggleSidebar()">☰</div>
+  <!-- Projects Section -->
+  <section class="projects-section">
+    <div class="container">
+      <h1 class="page-title">My Projects</h1>
+      <div class="projects-showcase">
+        <div class="project-item">
+          <div class="project-header">
+            <h3>Pong Game - Personal Project</h3>
+            <div class="project-tags">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag-status">Coming Soon</span>
+            </div>
+          </div>
+          <p>A simple yet engaging Pong game developed using HTML, CSS and JS With sound.I Tried to build basic small personal project using html, css, js.</p>
+          <p style="color: var(--text-light); font-size: 0.9rem; font-style: italic;">This project is currently being refined and will be available soon.</p>
+        </div>
 
-  <!-- Main Content -->
-  <div class="main-content">
-    <h1>Projects</h1>
-    <p><ul><li>Portfolio Website</li><li>Pong game</li></ul></p>
-  </div>
+        <div class="project-item">
+          <div class="project-header">
+            <h3>BuildSmart - Personal Project</h3>
+            <div class="project-tags">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">Responsive Design</span>
+              <span class="tag">Python</span>
+              <span class="tag-status">Coming Soon</span>
+            </div>
+          </div>
+          <p>A professional construction company website built with modern web technologies. Features responsive design, project showcase, service descriptions, and contact forms. Demonstrates proficiency in frontend development and UI/UX design.</p>
+          <p style="color: var(--text-light); font-size: 0.9rem; font-style: italic;">This project is currently being refined and will be available soon.</p>
+        </div>
+
+        <div class="project-item">
+          <div class="project-header">
+            <h3>Portfolio Website - Personal Project</h3>
+            <div class="project-tags">
+              <span class="tag">HTML5</span>
+              <span class="tag">CSS3</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">Responsive Design</span>
+              <span class="tag-status">Published</span>
+            </div>
+          </div>
+          <p>A responsive personal portfolio website showcasing projects, skills, and experience. Built with modern web technologies, featuring smooth animations, mobile optimization, and professional design.</p>
+          <p style="color: var(--text-light); font-size: 0.9rem; font-style: italic;">This portfolio website you are currently viewing!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>Abhinav</h4>
+          <p>Student || Full Stack || AI&Enthusiast || App Development</p>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Follow Me</h4>
+          <div class="social-links">
+            <a href="https://github.com/Abhinavvel2006" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/abhinavvel2006" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Abhinav. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
 
   <script src="script.js"></script>
 </body>
-
 </html>

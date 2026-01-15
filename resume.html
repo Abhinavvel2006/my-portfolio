@@ -3,43 +3,175 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Resume</title>
+  <title>Resume - Abhinav Portfolio</title>
   <link rel="stylesheet" href="style.css">
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-  <!-- Sidebar -->
-  <div class="sidebar" id="sidebar">
-    <div class="profile">
-      <img src="profile.jpg" alt="Profile">
-      <h2>Abhinav</h2>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <i class="fas fa-code"></i> Abhinav
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="projects.html" class="nav-link">Projects</a></li>
+        <li><a href="resume.html" class="nav-link active">Resume</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
     </div>
-    <ul class="menu">
-      <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
-      <li><a href="about.html"><i class="fas fa-user"></i> About Me</a></li>
-      <li><a href="resume.html"><i class="fas fa-file"></i> Resume</a></li>
-      <li><a href="projects.html"><i class="fas fa-code"></i> Projects</a></li>
-      <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
-    </ul>
-  </div>
+  </nav>
 
-  <!-- Toggle Button -->
-  <div class="toggle-btn" onclick="toggleSidebar()">☰</div>
+  <!-- Resume Section -->
+  <section class="resume-section">
+    <div class="container">
+      <h1 class="page-title">Resume</h1>
+      
+      <div class="resume-download">
+        <a href="./Abhinav_CV.docx" class="btn btn-primary" download>
+          <i class="fas fa-download"></i> Download Resume
+        </a>
+      </div>
 
-  <!-- Main Content -->
-  <div class="main-content">
-    <h1>My Resume</h1>
+      <div class="resume-section-content">
+        <h2>Executive Summary</h2>
+        <p>Passionate Full Stack Developer and AI enthusiast with strong foundation in web development, software engineering, and machine learning. Proven ability to build responsive web applications and explore innovative AI solutions. Committed to continuous learning and delivering high-quality code.</p>
+      </div>
 
-    <!-- Resume Preview -->
-    <iframe src="Abhinav_CV.docx" width="100%" height="600px"></iframe>
+      <div class="resume-section-content">
+        <h2>Education</h2>
+        
+        <div class="resume-item">
+          <div class="item-header">
+            <h3>Bachelor of Science in Computer Science</h3>
+            <span class="date">2024 - 2027</span>
+          </div>
+          <p class="company">Scott Christian College,Nagercoil</p>
+          <ul>
+            <li>Pursuing comprehensive computer science curriculum</li>
+            <li>Coursework: Data Structures, Algorithms, Web Development, Database Design</li>
+            <li>Active participation in college projects and technical activities</li>
+          </ul>
+        </div>
+      </div>
 
-    <!-- Download Button -->
-    <a href="Abhinav_CV.docx" download class="download-btn">
-      <i class="fas fa-download"></i> Download Resume
-    </a>
-  </div>
+      <!-- Technical Skills -->
+      <div class="resume-section-content">
+        <h2>Technical Skills</h2>
+        <div class="skills-table">
+          <div class="skill-row">
+            <strong>Core Skills:</strong>
+            <span>Full Stack Development, App Development, AI & Entrepreneurship</span>
+          </div>
+          <div class="skill-row">
+            <strong>Frontend:</strong>
+            <span>HTML, CSS, JavaScript, Responsive Design, Bootstrap, Jquery</span>
+          </div>
+          <div class="skill-row">
+            <strong>Backend:</strong>
+            <span>Python, Java, REST APIs, Database Design, MySQL</span>
+          </div>
+          <div class="skill-row">
+            <strong>Tools & Platforms:</strong>
+            <span>Git, GitHub, VS Code, Visual Studio, Linux</span>
+          </div>
+          <div class="skill-row">
+            <strong>AI/ML:</strong>
+            <span>TensorFlow, PyTorch, Pandas, NumPy, Scikit-learn</span>
+          </div>
+          <div class="skill-row">
+            <strong>Databases:</strong>
+            <span>MySQL, Oracle, MongoDB</span>
+          </div>
+          <div class="skill-row">
+            <strong>App Development:</strong>
+            <span>Dart(Flutter), JavaScript/TypeScript(React Native)</span>
+        </div>
+      </div>
+
+      <!-- Certifications -->
+      <div class="resume-section-content">
+        <h2>Certifications & Achievements</h2>
+        
+        <div class="resume-item">
+          <h3><i class="fas fa-certificate"></i> Full Stack Development Certification</h3>
+          <p>Completed 6-month intensive Full Stack Development program at GTEC covering frontend, backend, and database technologies</p>
+        </div>
+
+        <div class="resume-item">
+          <h3><i class="fas fa-briefcase"></i> Network Systems Internship</h3>
+          <p>Gained practical experience in network system administration, configuration, and troubleshooting</p>
+        </div>
+
+        <div class="resume-item">
+          <h3><i class="fas fa-trophy"></i> AI & Entrepreneurship Initiative(Youtube Learning)</h3>
+          <p>Currently learning and exploring innovative solutions combining AI technologies with entrepreneurial ventures through Youtube</p>
+        </div>
+
+        <div class="resume-item">
+          <h3><i class="fas fa-mobile-alt"></i> App Development (YouTube Learning)</h3>
+          <p>Engaged in comprehensive app development education through YouTube tutorials, focusing on practical development of mobile and desktop applications. Projects include Pong Game using Python and Full Stack Web Applications like BuildSmart Construction Website</p>
+        </div>
+      </div>
+
+      <div class="resume-item">
+        <h3><i class="fas fa-"</h3>
+      </div>
+      <div class="resume-section-content">
+        <h2>Languages</h2>
+        <div class="language-list">
+          <div class="language-item">
+            <span>English</span>
+            <div class="proficiency">Professional Working Proficiency</div>
+          </div>
+          <div class="language-item">
+            <span>Tamil</span>
+            <div class="proficiency">Native/Bilingual Proficiency</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>Abhinav</h4>
+          <p>Student || Full Stack || AI&Enthusiast || App Development</p>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Follow Me</h4>
+          <div class="social-links">
+            <a href="https://github.com/Abhinavvel2006" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/abhinavvel2006" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Abhinav. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
 
   <script src="script.js"></script>
 </body>
-
 </html>
+     
