@@ -205,3 +205,36 @@ window.addEventListener('scroll', function () {
     navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.05)';
   }
 });
+  closeSidebar();
+  updateToggleAria();
+}
+
+window.addEventListener('resize', syncSidebarOnResize);
+// initial sync
+syncSidebarOnResize();
+
+const texts = ["Studying in Web Development and  Programming", "a Student in BSc Computer science at Scott Christian college "];
+let count = 0;
+let index = 0;
+let currentText = "";
+let letter = "";
+
+function type() {
+  if (count === texts.length) {
+    count = 0;
+  }
+  currentText = texts[count];
+  letter = currentText.slice(0, ++index);
+
+  document.getElementById("typing").textContent = letter;
+
+  if (letter.length === currentText.length) {
+    count++;
+    index = 0;
+    setTimeout(type, 1000); 
+  } else {
+    setTimeout(type, 100);
+  }
+}
+
+type();
