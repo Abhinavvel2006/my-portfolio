@@ -1,6 +1,6 @@
 # Abhinav's Portfolio
 
-A modern, responsive personal portfolio website showcasing my work, skills, and projects as a Full Stack Developer and AI Enthusiast.
+A modern, responsive personal portfolio website showcasing my work, skills, and projects as a Student ,Full Stack Developer ,App developer and AI Enthusiast.
 
 ## 🌟 Features
 
@@ -42,7 +42,7 @@ portfolio/
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/portfolio.git
+git clone https://github.com/abhinavvel2006/portfolio.git
 cd portfolio
 ```
 
@@ -139,7 +139,7 @@ git push origin main
 
 2. Go to Settings → Pages
 3. Select `main` branch as source
-4. Your portfolio will be live at `https://yourusername.github.io/portfolio`
+4. Your portfolio will be live at `https://abhinavvel2006.github.io/portfolio`
 
 ### Other Hosting Options
 - Netlify
@@ -165,14 +165,13 @@ This project is open source and available under the MIT License. Feel free to us
 
 ## 🤝 Contributing
 
-Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/yourusername/portfolio/issues).
+Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/abhinavvel2006/portfolio/issues).
 
 ## 📞 Contact
 
-- Email: your.email@example.com
-- LinkedIn: [Your LinkedIn Profile]
-- GitHub: [@yourusername](https://github.com/yourusername)
-- Twitter: [@yourhandle](https://twitter.com/yourhandle)
+- Email: aadilabhinav33@gmail.com
+- LinkedIn: https://www.linkedin.com/in/abhinavvel2006
+- GitHub: https://www.github.com/abhinavvel2006
 
 ## 🙏 Acknowledgments
 
