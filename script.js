@@ -34,6 +34,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Add animations on scroll
   observeElements();
+
+  // Initialize typing effect
+  initializeTypingEffect();
 });
 
 // Set active navigation link based on current page
@@ -125,44 +128,53 @@ function observeElements() {
   });
 }
 
-// Add typing effect (optional)
-function typeText(element, text, speed = 50) {
-  let index = 0;
-  element.innerHTML = '';
+// Initialize typing effect
+function initializeTypingEffect() {
+  const typingElement = document.getElementById('typing');
+  if (!typingElement) return;
+
+  const texts = [
+    "Studying in Web Development and Programming",
+    "a Student in BSc Computer Science at Scott Christian College"
+  ];
+  
+  let textIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+  let typingSpeed = 100;
 
   function type() {
-    if (index < text.length) {
-      element.innerHTML += text.charAt(index);
-      index++;
-      setTimeout(type, speed);
+    const currentText = texts[textIndex];
+    
+    if (isDeleting) {
+      // Remove characters
+      typingElement.textContent = currentText.substring(0, charIndex - 1);
+      charIndex--;
+      typingSpeed = 50;
+    } else {
+      // Add characters
+      typingElement.textContent = currentText.substring(0, charIndex + 1);
+      charIndex++;
+      typingSpeed = 100;
     }
+
+    // Check if word is complete
+    if (!isDeleting && charIndex === currentText.length) {
+      // Pause at end of word
+      isDeleting = true;
+      typingSpeed = 2000;
+    } else if (isDeleting && charIndex === 0) {
+      // Move to next word
+      isDeleting = false;
+      textIndex = (textIndex + 1) % texts.length;
+      typingSpeed = 500;
+    }
+
+    setTimeout(type, typingSpeed);
   }
 
   type();
 }
-
-// Initialize typing effect on hero section if element exists
-document.addEventListener('DOMContentLoaded', function () {
-  const typingElement = document.getElementById('typing');
-  if (typingElement) {
-    const texts = [
-      'a Full Stack Developer',
-      'an AI Enthusiast',
-      'a Problem Solver',
-      'a Web Developer'
-    ];
-
-    let currentIndex = 0;
-
-    function rotateTexts() {
-      typeText(typingElement, texts[currentIndex], 50);
-      currentIndex = (currentIndex + 1) % texts.length;
-      setTimeout(rotateTexts, 3000);
-    }
-
-    rotateTexts();
-  }
-});
 
 // Scroll-to-top functionality
 function scrollToTop() {
@@ -184,7 +196,7 @@ window.addEventListener('scroll', function () {
   }
 });
 
-// Add active class to navbar on scroll
+// Add shadow to navbar on scroll
 window.addEventListener('scroll', function () {
   const navbar = document.querySelector('.navbar');
   if (navbar && window.scrollY > 0) {
@@ -193,36 +205,3 @@ window.addEventListener('scroll', function () {
     navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.05)';
   }
 });
-  closeSidebar();
-  updateToggleAria();
-}
-
-window.addEventListener('resize', syncSidebarOnResize);
-// initial sync
-syncSidebarOnResize();
-
-const texts = ["Studying in Web Development and  Programming", "a Student in BSc Computer science at Scott Christian college "];
-let count = 0;
-let index = 0;
-let currentText = "";
-let letter = "";
-
-function type() {
-  if (count === texts.length) {
-    count = 0;
-  }
-  currentText = texts[count];
-  letter = currentText.slice(0, ++index);
-
-  document.getElementById("typing").textContent = letter;
-
-  if (letter.length === currentText.length) {
-    count++;
-    index = 0;
-    setTimeout(type, 1000); 
-  } else {
-    setTimeout(type, 100);
-  }
-}
-
-type();
