@@ -34,9 +34,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Add animations on scroll
   observeElements();
-
-  // Initialize typing effect
-  initializeTypingEffect();
 });
 
 // Set active navigation link based on current page
@@ -128,54 +125,6 @@ function observeElements() {
   });
 }
 
-// Initialize typing effect
-function initializeTypingEffect() {
-  const typingElement = document.getElementById('typing');
-  if (!typingElement) return;
-
-  const texts = [
-    "Studying in Web Development and Programming",
-    "a Student in BSc Computer Science at Scott Christian College"
-  ];
-  
-  let textIndex = 0;
-  let charIndex = 0;
-  let isDeleting = false;
-  let typingSpeed = 100;
-
-  function type() {
-    const currentText = texts[textIndex];
-    
-    if (isDeleting) {
-      // Remove characters
-      typingElement.textContent = currentText.substring(0, charIndex - 1);
-      charIndex--;
-      typingSpeed = 50;
-    } else {
-      // Add characters
-      typingElement.textContent = currentText.substring(0, charIndex + 1);
-      charIndex++;
-      typingSpeed = 100;
-    }
-
-    // Check if word is complete
-    if (!isDeleting && charIndex === currentText.length) {
-      // Pause at end of word
-      isDeleting = true;
-      typingSpeed = 2000;
-    } else if (isDeleting && charIndex === 0) {
-      // Move to next word
-      isDeleting = false;
-      textIndex = (textIndex + 1) % texts.length;
-      typingSpeed = 500;
-    }
-
-    setTimeout(type, typingSpeed);
-  }
-
-  type();
-}
-
 // Scroll-to-top functionality
 function scrollToTop() {
   window.scrollTo({
@@ -205,36 +154,3 @@ window.addEventListener('scroll', function () {
     navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.05)';
   }
 });
-  closeSidebar();
-  updateToggleAria();
-}
-
-window.addEventListener('resize', syncSidebarOnResize);
-// initial sync
-syncSidebarOnResize();
-
-const texts = ["Studying in Web Development and  Programming", "a Student in BSc Computer science at Scott Christian college "];
-let count = 0;
-let index = 0;
-let currentText = "";
-let letter = "";
-
-function type() {
-  if (count === texts.length) {
-    count = 0;
-  }
-  currentText = texts[count];
-  letter = currentText.slice(0, ++index);
-
-  document.getElementById("typing").textContent = letter;
-
-  if (letter.length === currentText.length) {
-    count++;
-    index = 0;
-    setTimeout(type, 1000); 
-  } else {
-    setTimeout(type, 100);
-  }
-}
-
-type();
