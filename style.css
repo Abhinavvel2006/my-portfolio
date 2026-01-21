@@ -889,6 +889,14 @@ body {
   margin-bottom: 1rem;
 }
 
+<<<<<<< HEAD
+=======
+.project-item a{
+  text-decoration: none;
+  width: 0%;
+}
+
+>>>>>>> 68b84e8 (update project)
 .project-links {
   display: flex;
   gap: 1.5rem;
