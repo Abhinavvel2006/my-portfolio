@@ -117,7 +117,7 @@
       <div class="footer-content">
         <div class="footer-section">
           <h4>Abhinav</h4>
-          <p>Student || Full Stack || AI&Enthusiast || App Development</p>
+          <p>Student || Full Stack || App Development</p>
         </div>
         <div class="footer-section">
           <h4>Quick Links</h4>
@@ -143,6 +143,34 @@
   </footer>
 
   <script src="script.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script>
+    // Initialize EmailJS with your public key
+    emailjs.init('YOUR_PUBLIC_KEY'); // Replace with your EmailJS public key
+
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      // Get form data
+      const formData = {
+        from_name: document.getElementById('name').value,
+        from_email: document.getElementById('email').value,
+        subject: document.getElementById('subject').value,
+        message: document.getElementById('message').value,
+        to_email: 'aadilabhinav33@gmail.com' // Your email address
+      };
+
+      // Send email using EmailJS
+      emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', formData) // Replace with your service and template IDs
+        .then(function(response) {
+          alert('Message sent successfully!');
+          document.getElementById('contactForm').reset();
+        }, function(error) {
+          alert('Failed to send message. Please try again.');
+          console.error('EmailJS error:', error);
+        });
+    });
+  </script>
 </body>
 </html>
 
