@@ -195,7 +195,7 @@ describe('Contact form', () => {
   })
 })
 
-describe('Resume assets', () => {
+describe('Résumé assets', () => {
   it('links download and open actions to the original public PDF and loads its preview on request', async () => {
     render(<ResumePage />)
     const download = screen.getByRole('link', { name: 'Download PDF' })
@@ -204,12 +204,12 @@ describe('Resume assets', () => {
     expect(screen.getByRole('link', { name: 'Open original PDF' }).getAttribute('href')).toBe(
       download.getAttribute('href'),
     )
-    expect(screen.queryByTitle('Abhinav’s original resume PDF')).toBeNull()
+    expect(screen.queryByTitle('Abhinav’s original résumé PDF')).toBeNull()
     const details = document.querySelector('details')
     details.open = true
     fireEvent(details, new Event('toggle'))
     await waitFor(() =>
-      expect(screen.getByTitle('Abhinav’s original resume PDF').getAttribute('src')).toBe(
+      expect(screen.getByTitle('Abhinav’s original résumé PDF').getAttribute('src')).toBe(
         download.getAttribute('href'),
       ),
     )

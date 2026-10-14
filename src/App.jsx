@@ -15,7 +15,7 @@ const titles = {
   home: 'Full Stack Developer',
   about: 'About',
   projects: 'Projects',
-  resume: 'Resume',
+  resume: 'Résumé',
   contact: 'Contact',
   'not-found': 'Page not found',
 }

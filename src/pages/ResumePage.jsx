@@ -19,7 +19,7 @@ export default function ResumePage() {
         eyebrow="Experience, education & what’s next"
         title={
           <>
-            My resume<span>.</span>
+            My résumé<span>.</span>
           </>
         }
         action={
@@ -133,7 +133,7 @@ export default function ResumePage() {
       >
         <summary>
           <span>
-            <Icon name="file" size={21} /> Preview the original resume PDF
+            <Icon name="file" size={21} /> Preview the original résumé PDF
           </span>
           <Icon name="chevron" size={20} />
         </summary>
@@ -148,7 +148,7 @@ export default function ResumePage() {
           {previewOpen && (
             <iframe
               src={resumeUrl}
-              title="Abhinav’s original resume PDF"
+              title="Abhinav’s original résumé PDF"
               className="resume-frame"
             />
           )}
