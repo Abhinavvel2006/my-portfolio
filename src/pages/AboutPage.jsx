@@ -45,9 +45,9 @@ export default function AboutPage() {
             development.
           </p>
           <p>
-            My journey includes six months of full-stack development training, a network systems
-            certification, and a MERN Stack internship. Each experience has helped me connect theory
-            with practical, hands-on work.
+            My journey includes six months of full-stack development training, a two-month mobile
+            app development internship at Topgrade Innovations, and a MERN Stack internship. Each
+            experience has helped me connect theory with practical, hands-on work.
           </p>
           <p>
             I care about clean, maintainable code and interfaces that are easy to use. I’m
@@ -63,7 +63,7 @@ export default function AboutPage() {
             </span>
           </div>
           <Button href="#/resume" variant="secondary" icon="file">
-            Explore my résumé
+            Explore my resume
           </Button>
         </div>
       </section>

@@ -23,6 +23,10 @@ describe('React navigation', () => {
     expect(screen.getByRole('heading', { level: 1 }).textContent).toContain('Building ideas.')
     changeRoute('about')
     expect(screen.getByRole('heading', { level: 1 }).textContent).toContain('Always a learner')
+    expect(screen.getByRole('heading', { name: 'Mobile App Development Internship' })).toBeTruthy()
+    expect(screen.getByText('Topgrade Innovations')).toBeTruthy()
+    expect(screen.getByText('2 months')).toBeTruthy()
+    expect(screen.queryByText('Network Systems Certification')).toBeNull()
     const mainNav = screen.getByRole('navigation', { name: 'Main navigation' })
     expect(within(mainNav).getByText('About').getAttribute('aria-current')).toBe('page')
     changeRoute('projects')
@@ -198,18 +202,19 @@ describe('Contact form', () => {
 describe('Résumé assets', () => {
   it('links download and open actions to the original public PDF and loads its preview on request', async () => {
     render(<ResumePage />)
+    expect(screen.getByRole('heading', { level: 1 }).textContent).toContain('My Resume')
     const download = screen.getByRole('link', { name: 'Download PDF' })
     expect(download.getAttribute('href')).toContain('MyResume.pdf')
     expect(download.getAttribute('download')).toBe('Abhinav_Resume.pdf')
     expect(screen.getByRole('link', { name: 'Open original PDF' }).getAttribute('href')).toBe(
       download.getAttribute('href'),
     )
-    expect(screen.queryByTitle('Abhinav’s original résumé PDF')).toBeNull()
+    expect(screen.queryByTitle('Abhinav’s original resume PDF')).toBeNull()
     const details = document.querySelector('details')
     details.open = true
     fireEvent(details, new Event('toggle'))
     await waitFor(() =>
-      expect(screen.getByTitle('Abhinav’s original résumé PDF').getAttribute('src')).toBe(
+      expect(screen.getByTitle('Abhinav’s original resume PDF').getAttribute('src')).toBe(
         download.getAttribute('href'),
       ),
     )

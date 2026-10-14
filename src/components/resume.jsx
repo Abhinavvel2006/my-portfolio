@@ -14,11 +14,11 @@ export default function Resume() {
     },
     {
       title: 'Mobile App Development Internship',
-      duration: 'Ongoing',
+      duration: '2 Months',
       details: [
-        'Learning Flutter and Dart for mobile application development.',
-        'Practicing responsive UI design, navigation, and basic application features.',
-        'Learning Android application testing and debugging using Android Studio.',
+        'Worked with Flutter and Dart for mobile application development.',
+        'Practiced responsive UI design, navigation, and basic application features.',
+        'Tested and debugged Android applications using Android Studio.',
       ],
     },
   ]

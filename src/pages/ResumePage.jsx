@@ -19,7 +19,7 @@ export default function ResumePage() {
         eyebrow="Experience, education & what’s next"
         title={
           <>
-            My résumé<span>.</span>
+            My Resume<span>.</span>
           </>
         }
         action={
@@ -103,7 +103,6 @@ export default function ResumePage() {
               {education.slice(1).map((item) => (
                 <li key={item.title}>{item.title}</li>
               ))}
-              <li>Mobile Application Development Internship</li>
             </ul>
           </section>
           <section className="resume-side-section">
@@ -133,7 +132,7 @@ export default function ResumePage() {
       >
         <summary>
           <span>
-            <Icon name="file" size={21} /> Preview the original résumé PDF
+            <Icon name="file" size={21} /> Preview the original resume PDF
           </span>
           <Icon name="chevron" size={20} />
         </summary>
@@ -148,7 +147,7 @@ export default function ResumePage() {
           {previewOpen && (
             <iframe
               src={resumeUrl}
-              title="Abhinav’s original résumé PDF"
+              title="Abhinav’s original resume PDF"
               className="resume-frame"
             />
           )}
