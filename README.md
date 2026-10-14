@@ -1,186 +1,75 @@
-# Abhinav's Portfolio
+# Abhinav's React Portfolio
 
-A modern, responsive personal portfolio website showcasing my work, skills, and projects as a Student ,Full Stack Developer ,App developer and AI Enthusiast.
+A complete React + Vite rebuild of the supplied portfolio. The modern charcoal-and-green design includes Home, About, Projects, Resume, and Contact views, with responsive layouts and reusable components.
 
-## 🌟 Features
+## Run in VS Code
 
-- **Responsive Design**: Works seamlessly on desktop, tablet, and mobile devices
-- **Modern UI**: Clean and professional design with smooth animations
-- **Hero Section**: Eye-catching landing section with call-to-action buttons
-- **Featured Projects**: Showcase of key projects with descriptions and links
-- **Skills Section**: Display of technical expertise and tools
-- **About Page**: Detailed information about background, journey, and philosophy
-- **Projects Page**: Comprehensive project portfolio with descriptions
-- **Resume Page**: Professional resume with experience, education, and certifications
-- **Contact Page**: Contact form and social media links
-- **Smooth Navigation**: Sticky navigation bar with active link indicators
-- **Mobile Menu**: Responsive hamburger menu for mobile devices
+Install Node.js **22.12 or newer**, extract this ZIP, open the `portfolio` folder in VS Code, and run these commands in its terminal:
 
-## 📁 Project Structure
-
-```
-portfolio/
-├── index.html          # Home page with hero section
-├── about.html          # About me page with experience
-├── projects.html       # Portfolio projects showcase
-├── resume.html         # Professional resume
-├── contact.html        # Contact form and links
-├── style.css           # Main stylesheet with responsive design
-├── script.js           # JavaScript for interactivity
-├── image/              # Images folder
-│   └── profile.jpg     # Profile picture
-└── README.md           # This file
-```
-
-## 🚀 Getting Started
-
-### Prerequisites
-- Modern web browser (Chrome, Firefox, Safari, Edge)
-- Text editor (VS Code, Sublime Text, etc.)
-
-### Installation
-
-1. Clone the repository:
 ```bash
-git clone https://github.com/abhinavvel2006/portfolio.git
-cd portfolio
+npm ci
+npm run dev
 ```
 
-2. Open the project in your browser:
-   - Simply open `index.html` in your web browser, or
-   - Use a local server (recommended):
-   ```bash
-   python -m http.server 8000
-   # Visit http://localhost:8000
-   ```
+Open the local URL printed by Vite, usually `http://localhost:5173`. Use the Vite server to run the source project; opening the source HTML file directly does not compile JSX.
 
-## 💻 Technologies Used
+## Included features
 
-### Frontend
-- **HTML5**: Semantic markup and structure
-- **CSS3**: Modern styling with flexbox and grid
-- **JavaScript**: Interactivity and form validation
-- **Font Awesome**: Icons and visual elements
+- Reusable navigation, footer, buttons, icons, headings, technology tags, skill cards, project cards, project illustrations, detail dialogs, and contact form.
+- Responsive layouts for phones, tablets, laptops, and wider displays.
+- Accessible mobile navigation, active page indicators, keyboard focus styles, and a skip-to-content link.
+- Persistent light/dark theme toggle that also works when local storage is unavailable.
+- Project category filters, technology/name search, result counts, and an empty state with a reset action.
+- Native project dialogs with close, backdrop, and Escape handling, scroll locking, and focus restoration.
+- Original profile photo and resume PDF, including download, open, and on-demand PDF preview.
+- Inline contact validation, email address copying, and a prepared email draft with encoded subject and body.
+- Reduced-motion support, hover feedback, page entrance animations, and a back-to-top button.
 
-### Features
-- Responsive design with CSS Grid and Flexbox
-- CSS animations and transitions
-- Mobile-first approach
-- Accessibility best practices (ARIA labels, semantic HTML)
-- Form validation with JavaScript
+**Contact behavior:** the form opens the visitor's email application with a prepared message. The visitor sends it there. It does not send email automatically or use placeholder EmailJS keys. A working mail application or browser mail handler is required; the draft link and direct contact channels are also available.
 
-## 📝 Customization
+Project preview graphics are labeled **Interface illustration**. They are illustrative compositions built with CSS, rather than screenshots of the linked projects. Existing external website URLs are retained from the original project.
 
-### Update Personal Information
+## Customize
 
-1. **Name and Title**: Edit in all HTML files
-2. **Profile Image**: Replace `image/profile.jpg` with your photo
-3. **Contact Information**: Update in `contact.html`
-4. **Social Links**: Update footer and contact page with your social media URLs
-5. **Project Details**: Modify projects in `projects.html` and `about.html`
+| File                       | Purpose                                                                                                     |
+| -------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| `src/data/portfolio.js`    | Edit personal details, social links, project content, technologies, education, and experience in one place. |
+| `src/styles.css`           | Edit colors, spacing, typography, dark/light theme tokens, and responsive breakpoints.                      |
+| `src/components/`          | Reuse or extend shared UI components.                                                                       |
+| `src/pages/`               | Edit the content and layout of each page.                                                                   |
+| `src/hooks/useRoute.js`    | Hash navigation and compatibility with the original HTML/query URLs.                                        |
+| `src/hooks/useTheme.js`    | Theme state and persistence.                                                                                |
+| `src/utils/contact.js`     | Contact validation, URI encoding, and email application behavior.                                           |
+| `public/image/profile.jpg` | Replace the profile photo.                                                                                  |
+| `public/MyResume.pdf`      | Replace the downloadable resume.                                                                             |
+| `public/favicon.svg`       | Edit the browser-tab icon.                                                                                  |
 
-### Styling
+Use links such as `#/projects`, `#/about`, `#/resume`, and `#/contact` for internal navigation. Hash routes work on static hosts without server rewrite rules. The old `react.html?page=projects` and individual `about.html`, `projects.html`, `resume.html`, and `contact.html` URLs also render the React app.
 
-Customize colors by modifying CSS variables in `style.css`:
+To add a project, append an object to `projects` in `src/data/portfolio.js`. Set `category` to `web` or `mobile`. Add `liveUrl` or `sourceUrl` only when a real destination is available. The same data feeds the cards, dialog, filters, and resume highlights.
 
-```css
-:root {
-  --primary-color: #6366f1;
-  --secondary-color: #8b5cf6;
-  --accent-color: #ec4899;
-  /* ... other variables */
-}
-```
+## Build and verify
 
-## 📱 Responsive Breakpoints
-
-- **Desktop**: 1024px and above
-- **Tablet**: 768px - 1023px
-- **Mobile**: Below 768px
-
-## ✨ Features Implementation
-
-### Navigation
-- Sticky navigation bar with smooth scrolling
-- Mobile hamburger menu
-- Active link indicators
-- Smooth page transitions
-
-### Contact Form
-- Form validation
-- Email format checking
-- Success/error messages
-- Form reset after submission
-
-### Animations
-- Scroll-triggered animations
-- Smooth hover effects
-- Floating animations on hero section
-- Typing effect on hero subtitle
-
-## 🔄 Browser Support
-
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-- Mobile browsers (iOS Safari, Chrome Mobile)
-
-## 📦 Deployment
-
-### GitHub Pages
-
-1. Push your code to GitHub:
 ```bash
-git add .
-git commit -m "Initial portfolio commit"
-git push origin main
+npm test
+npm run build
+npm run preview
 ```
 
-2. Go to Settings → Pages
-3. Select `main` branch as source
-4. Your portfolio will be live at `https://abhinavvel2006.github.io/portfolio`
+The ZIP includes a generated `dist/` folder. For static hosting, deploy the contents of `dist/`; its `index.html` is the production entry point. Relative asset URLs support hosting at either a domain root or a repository subdirectory. Rebuild after editing source files.
 
-### Other Hosting Options
-- Netlify
-- Vercel
-- Heroku
-- AWS S3
-- Firebase Hosting
+The production build and 11 automated interaction tests passed. The tests cover React navigation, original URLs, mobile menu behavior, theme restoration and blocked storage, combined project filters/search, dialogs, form validation/encoding, and resume preview behavior. The original photo/PDF bytes and all production HTML asset references were also checked.
 
-## 🎯 Future Enhancements
+The interaction tests run in jsdom, which does not measure browser layout. Visual browser QA and real email-client handoff were unavailable in the editing environment; check the rendered pages at your target device sizes when running the project locally.
 
-- [ ] Dark mode toggle
-- [ ] Blog section
-- [ ] Project filtering
-- [ ] Backend contact form integration
-- [ ] CMS integration
-- [ ] Performance optimization
-- [ ] SEO improvements
-- [ ] Analytics integration
+## Fixes from the supplied project
 
-## 📄 License
+- `index.html` is now the main React entry instead of opening the old static homepage.
+- Corrected the Vite build command and ES module configuration.
+- Moved the image and PDF into Vite's public directory so they are included in production.
+- Replaced mixed HTML navigation with consistent client-side navigation and retained legacy URL compatibility.
+- Consolidated repeated content and UI into data-driven React components.
+- Removed CDN-dependent icon styling and replaced it with local SVG components.
+- Replaced the old false contact success alert and placeholder EmailJS setup with an explicit email draft flow.
 
-This project is open source and available under the MIT License. Feel free to use it as a template for your own portfolio.
-
-## 🤝 Contributing
-
-Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/abhinavvel2006/portfolio/issues).
-
-## 📞 Contact
-
-- Email: aadilabhinav33@gmail.com
-- LinkedIn: https://www.linkedin.com/in/abhinavvel2006
-- GitHub: https://www.github.com/abhinavvel2006
-
-## 🙏 Acknowledgments
-
-- Font Awesome for icons
-- Inspiration from modern portfolio designs
-- Open source community
-
----
-
-**Made with ❤️ by Abhinav**
-
-Last Updated: January 2026
+No backend or database is required to run this portfolio.
