@@ -20,7 +20,7 @@ export const navigation = [
   { id: 'home', label: 'Home' },
   { id: 'about', label: 'About' },
   { id: 'projects', label: 'Projects' },
-  { id: 'resume', label: 'Resume' },
+  { id: 'resume', label: 'Résumé' },
   { id: 'contact', label: 'Contact' },
 ]
 
@@ -110,7 +110,7 @@ export const projects = [
       'Reusable React components',
       'Responsive layouts and light/dark themes',
       'Searchable and filterable projects',
-      'Resume download and email draft form',
+      'Résumé download and email draft form',
     ],
     sourceUrl: profile.repository,
   },
@@ -188,11 +188,11 @@ export const education = [
     icon: 'layers',
   },
   {
-    title: 'Mobile App Development Internship',
-    organization: 'Topgrade Innovations',
-    date: '2 months',
-    description: 'Mobile application development internship at Topgrade Innovations.',
-    icon: 'terminal',
+    title: 'Network Systems Certification',
+    organization: 'Technical training',
+    date: '5 days',
+    description: 'Hands-on learning in web technologies, network troubleshooting, and IT support.',
+    icon: 'network',
   },
 ]
 
@@ -208,7 +208,7 @@ export const experience = [
   },
   {
     title: 'Mobile App Development Internship',
-    date: '2 months',
+    date: 'Ongoing',
     details: [
       'Learning Flutter and Dart for mobile applications.',
       'Practicing responsive interfaces, navigation, and application features.',
