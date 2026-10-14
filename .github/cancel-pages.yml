@@ -1,0 +1,30 @@
+name: Clear stuck GitHub Pages deployment
+
+on:
+  workflow_dispatch:
+    inputs:
+      stuck_commit_sha:
+        description: 'Full 40-character SHA shown after Please cancel in the deployment error'
+        required: true
+        type: string
+
+permissions:
+  pages: write
+
+jobs:
+  cancel:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Cancel the specified stuck Pages deployment
+        env:
+          GH_TOKEN: ${{ github.token }}
+          STUCK_PAGES_SHA: ${{ inputs.stuck_commit_sha }}
+        run: |
+          if [[ ! "$STUCK_PAGES_SHA" =~ ^[a-fA-F0-9]{40}$ ]]; then
+            echo "::error::Enter the full 40-character SHA shown after Please cancel."
+            exit 1
+          fi
+          gh api --method POST \
+            -H "Accept: application/vnd.github+json" \
+            "repos/${GITHUB_REPOSITORY}/pages/deployments/${STUCK_PAGES_SHA}/cancel"
+          echo "The cancellation request succeeded. Re-run the failed React deploy job."
