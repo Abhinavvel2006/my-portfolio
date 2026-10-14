@@ -16,10 +16,10 @@ export default function About() {
     },
     {
       icon: 'fas fa-certificate',
-      title: 'Network Systems Certification',
-      date: '5 Days',
+      title: 'Mobile App Development Internship',
+      date: '2 Months',
       description:
-        'Gained knowledge of web technologies, network systems, troubleshooting, and IT support.',
+        'Completed a two-month mobile app development internship at Topgrade Innovations.',
     },
     {
       icon: 'fas fa-certificate',
@@ -73,10 +73,10 @@ export default function About() {
               <p>
                 My journey in technology started with a passion for creating
                 solutions. I've completed full-stack development training,
-                gained experience through a network systems internship, and
-                completed a MERN Stack internship. I'm dedicated to learning
-                new development techniques and building a strong foundation
-                in full-stack web applications.
+                completed a mobile app development internship at Topgrade
+                Innovations, and completed a MERN Stack internship. I'm
+                dedicated to learning new development techniques and building
+                a strong foundation in full-stack web applications.
               </p>
 
               <h3>What I Do</h3>
