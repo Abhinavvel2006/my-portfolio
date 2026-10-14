@@ -914,6 +914,63 @@ body {
   transform: translateX(5px);
 }
 
+
+/* Compact React project cards */
+.compact-projects {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  align-items: stretch;
+}
+
+.compact-projects .project-card {
+  padding: 22px;
+  min-width: 0;
+}
+
+.compact-projects .project-image {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 18px;
+}
+
+.compact-projects .project-details h2 {
+  font-size: 1.2rem;
+  line-height: 1.4;
+  margin: 8px 0;
+}
+
+.compact-projects .project-details p {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  margin-bottom: 14px;
+}
+
+.compact-projects .skills-list {
+  gap: 8px;
+}
+
+.compact-projects .skill-tag {
+  padding: 8px 12px;
+  font-size: 0.8rem;
+}
+
+@media (max-width: 900px) {
+  .compact-projects {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .compact-projects {
+    grid-template-columns: 1fr;
+  }
+
+  .compact-projects .project-card {
+    padding: 18px;
+  }
+}
+
 /* ===== Contact Section ===== */
 .contact-section {
   padding: 60px 20px;

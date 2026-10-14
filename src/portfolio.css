@@ -1,0 +1,211 @@
+@import url('../style.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
+
+
+.resume-page {
+  padding: 55px 0;
+}
+
+.resume-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.resume-header > p {
+  color: #64748b;
+  margin-bottom: 24px;
+}
+
+.resume-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.resume-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(240px, 1fr);
+  gap: 28px;
+  align-items: start;
+}
+
+.resume-section {
+  margin-bottom: 28px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.resume-section h2 {
+  font-size: 1.35rem;
+  margin-bottom: 16px;
+  color: #625cf6;
+}
+
+.resume-section h3 {
+  font-size: 1rem;
+  margin: 12px 0 6px;
+}
+
+.resume-section p,
+.resume-section li {
+  color: #475569;
+  line-height: 1.7;
+}
+
+.resume-section ul {
+  padding-left: 22px;
+}
+
+.resume-item {
+  margin-bottom: 24px;
+}
+
+.resume-duration {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.resume-technologies {
+  font-size: 0.9rem;
+}
+
+.resume-skill-group {
+  margin-bottom: 18px;
+}
+
+.resume-skill-group p {
+  margin-top: 4px;
+}
+
+.resume-pdf-section {
+  margin-top: 50px;
+}
+
+.resume-pdf-frame {
+  width: 100%;
+  height: 800px;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+}
+
+@media (max-width: 760px) {
+  .resume-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .resume-pdf-frame {
+    height: 600px;
+  }
+}
+
+
+.contact-page {
+  padding: 55px 0;
+}
+
+.contact-intro {
+  text-align: center;
+  color: #64748b;
+  margin: -10px 0 36px;
+}
+
+.contact-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+  gap: 32px;
+  align-items: start;
+}
+
+.contact-info,
+.contact-form {
+  padding: 28px;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 8px 25px rgba(15, 23, 42, 0.06);
+}
+
+.contact-info h2,
+.contact-form h2 {
+  margin-bottom: 16px;
+}
+
+.contact-info > p,
+.form-note {
+  color: #64748b;
+  line-height: 1.6;
+}
+
+.contact-item {
+  display: flex;
+  gap: 14px;
+  align-items: start;
+  margin-top: 24px;
+}
+
+.contact-item > i {
+  color: #695cf6;
+  font-size: 1.25rem;
+  margin-top: 4px;
+}
+
+.contact-item h3 {
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+.contact-item a {
+  overflow-wrap: anywhere;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-form label {
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font: inherit;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: 2px solid #a5b4fc;
+  border-color: #695cf6;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.contact-form button {
+  margin-top: 12px;
+  cursor: pointer;
+}
+
+.form-note {
+  font-size: 0.85rem;
+}
+
+@media (max-width: 760px) {
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-info,
+  .contact-form {
+    padding: 20px;
+  }
+}

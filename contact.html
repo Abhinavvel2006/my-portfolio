@@ -1,176 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Me - Abhinav Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-</head>
-<body>
-  <!-- Navigation -->
-  <nav class="navbar">
-    <div class="nav-container">
-      <a href="index.html" class="logo">
-        <i class="fas fa-code"></i> Abhinav
-      </a>
-      <button class="nav-toggle" aria-label="Toggle navigation">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <ul class="nav-menu">
-        <li><a href="index.html" class="nav-link">Home</a></li>
-        <li><a href="about.html" class="nav-link">About</a></li>
-        <li><a href="projects.html" class="nav-link">Projects</a></li>
-        <li><a href="resume.html" class="nav-link">Resume</a></li>
-        <li><a href="contact.html" class="nav-link active">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <!-- Contact Section -->
-  <section class="contact-section">
-    <div class="container">
-      <h1 class="page-title">Get In Touch</h1>
-      <p class="contact-intro">Have a project in mind or want to collaborate? Feel free to reach out!</p>
-      
-      <div class="contact-content">
-        <div class="contact-info">
-          <div class="contact-card">
-            <div class="contact-icon">
-              <i class="fas fa-envelope"></i>
-            </div>
-            <h3>Email</h3>
-            <p><a href="mailto:aadilabhinav33@gmail.com">aadilabhinav33@gmail.com</a></p>
-          </div>
-
-          <div class="contact-card">
-            <div class="contact-icon">
-              <i class="fas fa-phone"></i>
-            </div>
-            <h3>Phone</h3>
-            <p><a href="tel:+917708332208">+91-7708332208</a></p>
-          </div>
-
-          <div class="contact-card">
-            <div class="contact-icon">
-              <i class="fas fa-map-marker-alt"></i>
-            </div>
-            <h3>Location</h3>
-            <p>Kanyakumari, India</p>
-          </div>
-
-          <div class="contact-card">
-            <div class="contact-icon">
-              <i class="fas fa-briefcase"></i>
-            </div>
-            <h3>Availability</h3>
-            <p>Open to freelance and full-time opportunities</p>
-          </div>
-        </div>
-
-        <form class="contact-form" id="contactForm">
-          <div class="form-group">
-            <label for="name">Your Name</label>
-            <input type="text" id="name" name="name" required>
-          </div>
-
-          <div class="form-group">
-            <label for="email">Your Email</label>
-            <input type="email" id="email" name="email" required>
-          </div>
-
-          <div class="form-group">
-            <label for="subject">Subject</label>
-            <input type="text" id="subject" name="subject" required>
-          </div>
-
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="6" required></textarea>
-          </div>
-
-          <button type="submit" class="btn btn-primary">Send Message</button>
-        </form>
-      </div>
-
-      <div class="social-connect">
-        <h2>Connect With Me</h2>
-        <div class="social-icons-large">
-          <a href="https://github.com/Abhinavvel2006" class="social-icon" title="GitHub">
-            <i class="fab fa-github"></i>
-            <span>GitHub</span>
-          </a>
-          <a href="https://www.linkedin.com/in/abhinavvel2006" class="social-icon" title="LinkedIn">
-            <i class="fab fa-linkedin"></i>
-            <span>LinkedIn</span>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-content">
-        <div class="footer-section">
-          <h4>Abhinav</h4>
-          <p>Student || Software Developer</p>
-        </div>
-        <div class="footer-section">
-          <h4>Quick Links</h4>
-          <ul>
-            <li><a href="about.html">About</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="resume.html">Resume</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-        <div class="footer-section">
-          <h4>Follow Me</h4>
-          <div class="social-links">
-            <a href="https://github.com/Abhinavvel2006" aria-label="GitHub"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/abhinavvel2006" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-          </div>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2026 Abhinav. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-  <script>
-    // Initialize EmailJS with your public key
-    emailjs.init('YOUR_PUBLIC_KEY'); // Replace with your EmailJS public key
-
-    document.getElementById('contactForm').addEventListener('submit', function(event) {
-      event.preventDefault();
-
-      // Get form data
-      const formData = {
-        from_name: document.getElementById('name').value,
-        from_email: document.getElementById('email').value,
-        subject: document.getElementById('subject').value,
-        message: document.getElementById('message').value,
-        to_email: 'aadilabhinav33@gmail.com' // Your email address
-      };
-
-      // Send email using EmailJS
-      emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', formData) // Replace with your service and template IDs
-        .then(function(response) {
-          alert('Message sent successfully!');
-          document.getElementById('contactForm').reset();
-        }, function(error) {
-          alert('Failed to send message. Please try again.');
-          console.error('EmailJS error:', error);
-        });
-    });
-  </script>
-</body>
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#101411" />
+    <meta
+      name="description"
+      content="Abhinav V — computer science student and developer. Explore my web and mobile projects, technical skills, and development journey."
+    />
+    <meta property="og:title" content="Abhinav — Developer & Curious Builder" />
+    <meta
+      property="og:description"
+      content="Building ideas. Crafting experiences. Explore my projects, skills, and journey."
+    />
+    <meta property="og:type" content="website" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>Abhinav — Full Stack Developer</title>
+    <script>
+      try {
+        const theme = localStorage.getItem('abhinav-theme') === 'light' ? 'light' : 'dark'
+        document.documentElement.dataset.theme = theme
+        document.documentElement.style.colorScheme = theme
+        document.querySelector('meta[name="theme-color"]').content =
+          theme === 'dark' ? '#101411' : '#f7f8f2'
+      } catch (_) {}
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <noscript>Please enable JavaScript to explore this React portfolio.</noscript>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
-
